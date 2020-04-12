@@ -18,6 +18,8 @@ namespace DatingApp.API.Helpers
                 .ForMember(dest => dest.Age, opts => opts.ResolveUsing(d => d.DateOfBirth.CalculateAge())); ;
             CreateMap<Photo, PhotosForDetailedDTO>();
             CreateMap<UserForUpdateDTO, User>();
+            CreateMap<Photo, PhotoForReturnDTO>();
+            CreateMap<PhotoForCreationDTO, Photo>();
         }
     }
 }
